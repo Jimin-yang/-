@@ -16,8 +16,8 @@ namespace PT_Project
 
     public partial class Form1: Form
     {
-        private string username;
-        private int usernumber;
+        private string username; // 로그인한 사용자 이름
+        private int usernumber; // 로그인한 사용자 번호 
 
         public string getusername
         {
