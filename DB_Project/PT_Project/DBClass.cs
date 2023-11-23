@@ -8,7 +8,7 @@ public class DBClass //DBClass 정의 시작
     OracleDataAdapter dBAdapter; // Data Provider인 DBAdapter 입니다.
     DataSet dS;// DataSet 객체입니다.
     OracleCommandBuilder myCommandBuilder; // 추가, 수정, 삭제시에 필요한 명령문을 자동으로 작성해주는 객체
-    DataTable customerTable;// DataTable 객체입니다.
+    DataTable consumerTable;// DataTable 객체입니다.
     public int SelectedRowIndex { get { return selectedRowIndex; } set { selectedRowIndex = value; } }
     public int SelectedKeyValue { get { return selectedKeyValue; } set { selectedKeyValue = value; } }
     public OracleDataAdapter DBAdapter { get { return dBAdapter; } set { dBAdapter = value; } }
@@ -18,13 +18,13 @@ public class DBClass //DBClass 정의 시작
         get { return myCommandBuilder; }
         set { myCommandBuilder = value; }
     }
-    public DataTable CustomerTable { get { return customerTable; } set { customerTable = value; } }
+    public DataTable ConsumerTable { get { return consumerTable; } set { consumerTable = value; } }
     public void DB_Open()
     {
         try
         {
             string connectionString = "User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) );";
-            string commandString = "select * from Customer";
+            string commandString = "select * from consumer";
             DBAdapter = new OracleDataAdapter(commandString, connectionString);
             MyCommandBuilder = new OracleCommandBuilder(DBAdapter);
             DS = new DataSet();
@@ -36,6 +36,6 @@ public class DBClass //DBClass 정의 시작
     }
     public void DB_ObjCreate()
     {
-        CustomerTable = new DataTable();
+        consumerTable = new DataTable();
     }
 }
