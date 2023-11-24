@@ -12,13 +12,14 @@ namespace PT_Project
 {
     public partial class 회원 : Form
     {
-        Form1 _parent;
+        loginF _parent;
         식단작성 MenuInput;
         회원상세 UserDetail;
-        public 회원(Form1 loginF)
+        public 회원(loginF loginF)
         {
             InitializeComponent();
             _parent = loginF;
+
         }
 
         private void 회원_Load(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace PT_Project
         {
             if (UserDetail == null || UserDetail.IsDisposed)  //Form4
             {
-                UserDetail = new 회원상세();
+                UserDetail = new 회원상세(_parent.getusernumber);
                 UserDetail.MdiParent = this;
                 UserDetail.Show();
             }
