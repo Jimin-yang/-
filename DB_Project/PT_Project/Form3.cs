@@ -12,10 +12,10 @@ namespace PT_Project
 {
     public partial class 트레이너 : Form
     {
-        Form1 _parent;
+        loginF _parent;
         회원관리 UserManagement;
         프로그램관리 ProgramManagement;
-        public 트레이너(Form1 loginF)
+        public 트레이너(loginF loginF)
         {
             InitializeComponent();
             _parent = loginF;

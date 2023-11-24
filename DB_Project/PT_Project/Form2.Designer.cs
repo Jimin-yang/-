@@ -38,7 +38,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.식단적성ToolStripMenuItem,
@@ -47,21 +46,22 @@
             this.평점조회ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 35);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(575, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // 식단적성ToolStripMenuItem
             // 
             this.식단적성ToolStripMenuItem.Name = "식단적성ToolStripMenuItem";
-            this.식단적성ToolStripMenuItem.Size = new System.Drawing.Size(106, 31);
+            this.식단적성ToolStripMenuItem.Size = new System.Drawing.Size(71, 23);
             this.식단적성ToolStripMenuItem.Text = "식단 적성";
             this.식단적성ToolStripMenuItem.Click += new System.EventHandler(this.식단적성ToolStripMenuItem_Click);
             // 
             // 회원상세페이지ToolStripMenuItem
             // 
             this.회원상세페이지ToolStripMenuItem.Name = "회원상세페이지ToolStripMenuItem";
-            this.회원상세페이지ToolStripMenuItem.Size = new System.Drawing.Size(166, 31);
+            this.회원상세페이지ToolStripMenuItem.Size = new System.Drawing.Size(111, 23);
             this.회원상세페이지ToolStripMenuItem.Text = "회원 상세 페이지";
             this.회원상세페이지ToolStripMenuItem.Click += new System.EventHandler(this.회원상세페이지ToolStripMenuItem_Click);
             // 
@@ -69,25 +69,25 @@
             // 
             this.name.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.name.Enabled = false;
-            this.name.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(100, 31);
+            this.name.Size = new System.Drawing.Size(71, 23);
             // 
             // 평점조회ToolStripMenuItem
             // 
             this.평점조회ToolStripMenuItem.Name = "평점조회ToolStripMenuItem";
-            this.평점조회ToolStripMenuItem.Size = new System.Drawing.Size(106, 31);
+            this.평점조회ToolStripMenuItem.Size = new System.Drawing.Size(71, 23);
             this.평점조회ToolStripMenuItem.Text = "평점 조회";
             this.평점조회ToolStripMenuItem.Click += new System.EventHandler(this.평점조회ToolStripMenuItem_Click);
             // 
             // 회원
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(575, 309);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "회원";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

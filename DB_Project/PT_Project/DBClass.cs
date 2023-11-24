@@ -1,14 +1,16 @@
-﻿using Oracle.DataAccess.Client;//ADO.Net 개체 참조
-using System.Data; //DataSet 개체 참조
-using System.Windows.Forms; //MessageBox 개체 참조
-public class DBClass //DBClass 정의 시작
+﻿using Oracle.DataAccess.Client;
+using System.Data;
+using System.Windows.Forms;
+
+public class DBClass
 {
-    private int selectedRowIndex;//수정하거나 삭제하기 위해 선택된 행의 인덱스를 저장한다.
-    private int selectedKeyValue; // 수정, 삭제할 때 필요한 레코드의 키값을 보관할 필드
-    OracleDataAdapter dBAdapter; // Data Provider인 DBAdapter 입니다.
-    DataSet dS;// DataSet 객체입니다.
-    OracleCommandBuilder myCommandBuilder; // 추가, 수정, 삭제시에 필요한 명령문을 자동으로 작성해주는 객체
-    DataTable consumerTable;// DataTable 객체입니다.
+    private int selectedRowIndex;
+    private int selectedKeyValue;
+    OracleDataAdapter dBAdapter;
+    DataSet dS;
+    OracleCommandBuilder myCommandBuilder;
+    DataTable consumerTable;
+
     public int SelectedRowIndex { get { return selectedRowIndex; } set { selectedRowIndex = value; } }
     public int SelectedKeyValue { get { return selectedKeyValue; } set { selectedKeyValue = value; } }
     public OracleDataAdapter DBAdapter { get { return dBAdapter; } set { dBAdapter = value; } }
@@ -19,12 +21,13 @@ public class DBClass //DBClass 정의 시작
         set { myCommandBuilder = value; }
     }
     public DataTable ConsumerTable { get { return consumerTable; } set { consumerTable = value; } }
-    public void DB_Open()
+
+    public void DB_Open(int select)
     {
         try
         {
-            string connectionString = "User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) );";
-            string commandString = "select * from consumer";
+            string connectionString = "User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) );";
+            string commandString = "select C.*, P.P_Start || ' - ' || P.P_End as PT기간, TRUNC(P.P_End - SYSDATE) as PT남은일수 from consumer C join program P on C.U_NO = P.U_NO and C.U_NO = " + select;
             DBAdapter = new OracleDataAdapter(commandString, connectionString);
             MyCommandBuilder = new OracleCommandBuilder(DBAdapter);
             DS = new DataSet();
@@ -34,6 +37,8 @@ public class DBClass //DBClass 정의 시작
             MessageBox.Show(DE.Message);
         }
     }
+
+
     public void DB_ObjCreate()
     {
         consumerTable = new DataTable();

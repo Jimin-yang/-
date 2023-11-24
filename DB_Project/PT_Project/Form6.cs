@@ -25,7 +25,7 @@ namespace PT_Project
         private void searchBtn1_Click(object sender, EventArgs e)
         {
              listView1.Items.Clear();
-            OracleConnection myConnection = new OracleConnection("User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) );");
+            OracleConnection myConnection = new OracleConnection("User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) );");
             string commandString = string.Concat("select P.U_NO, C.cname from program P, consumer C where P.U_NO = C.U_NO and P.T_NO = ",  SelectID.ToString());
             OracleCommand myCommand = new OracleCommand()
             {
@@ -51,7 +51,7 @@ namespace PT_Project
                 if ( checkBox1.Checked)
                 {
                      Btn.Text = "수정";
-                     odpConn.ConnectionString = "User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION =   (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))   (CONNECT_DATA =     (SERVER = DEDICATED)     (SERVICE_NAME = xe)   ) );";
+                     odpConn.ConnectionString = "User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION =   (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521))   (CONNECT_DATA =     (SERVER = DEDICATED)     (SERVICE_NAME = xe)   ) );";
                      odpConn.Open();
                     OracleDataAdapter oda = new OracleDataAdapter()
                     {
@@ -69,7 +69,7 @@ namespace PT_Project
                 else
                 {
                      Btn.Text = "추가";
-                     odpConn.ConnectionString = "User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION =   (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))   (CONNECT_DATA =     (SERVER = DEDICATED)     (SERVICE_NAME = xe)   ) );";
+                     odpConn.ConnectionString = "User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION =   (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521))   (CONNECT_DATA =     (SERVER = DEDICATED)     (SERVICE_NAME = xe)   ) );";
                      odpConn.Open();
                     OracleDataAdapter oda = new OracleDataAdapter()
                     {
@@ -100,7 +100,7 @@ namespace PT_Project
                 int selectID = Convert.ToInt32(DBGrid.SelectedCells[0].Value);
                 string selectDATE = DBGrid.SelectedCells[1].Value.ToString().Substring(0, 11);
                 day.Text = selectDATE;
-                odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+                odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
                 odpConn.Open();
                 OracleCommand OraCmd = new OracleCommand("SELECT P_Menu, P_Grade, P_Feedback FROM consumerDiet WHERE U_NO= :U_NO and P_date =:P_date",  odpConn);
                 OraCmd.Parameters.Add("U_NO", OracleDbType.Int32).Value = selectID;
@@ -153,7 +153,7 @@ namespace PT_Project
                 int selectID = Convert.ToInt32( DBGrid.SelectedCells[0].Value);
                 string selectDATE =  DBGrid.SelectedCells[1].Value.ToString().Substring(0, 11);
                  day.Text = selectDATE;
-                 odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+                 odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
                  odpConn.Open();
                 OracleCommand OraCmd = new OracleCommand("SELECT P_Menu FROM consumerDiet WHERE U_NO= :U_NO and P_date =:P_date",  odpConn);
                 OraCmd.Parameters.Add("U_NO", OracleDbType.Int32).Value = selectID;
@@ -207,7 +207,7 @@ namespace PT_Project
 
         private void Btn_Click(object sender, EventArgs e)
         {
-             odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+             odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
              odpConn.Open();
             int grade =  returnGrade();
             int selectID = Convert.ToInt32( DBGrid.SelectedCells[0].Value);

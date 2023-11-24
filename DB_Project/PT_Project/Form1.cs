@@ -14,7 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace PT_Project
 {
 
-    public partial class Form1: Form
+    public partial class loginF: Form
     {
         private string username; // 로그인한 사용자 이름
         private int usernumber; // 로그인한 사용자 번호 
@@ -28,7 +28,7 @@ namespace PT_Project
         {
             get { return usernumber; }
         }
-        public Form1()
+        public loginF()
         {
             InitializeComponent();
         }
@@ -40,7 +40,7 @@ namespace PT_Project
             {
                 using (OracleConnection odpConn = new OracleConnection())
                 {
-                    odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+                    odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
                     odpConn.Open();
                     using (OracleCommand cmd = new OracleCommand("SELECT * FROM consumer WHERE U_NO = :usernumber", odpConn))
                     {
@@ -71,7 +71,7 @@ namespace PT_Project
             {
                 using (OracleConnection odpConn = new OracleConnection())
                 {
-                    odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+                    odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
                     odpConn.Open();
                     using (OracleCommand cmd = new OracleCommand("SELECT * FROM trainer  WHERE T_NO = :usernumber", odpConn))
                     {
