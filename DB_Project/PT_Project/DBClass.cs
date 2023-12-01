@@ -22,21 +22,29 @@ public class DBClass
     }
     public DataTable ConsumerTable { get { return consumerTable; } set { consumerTable = value; } }
 
+
+
     public void DB_Open(int select)
     {
         try
         {
             string connectionString = "User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) );";
-            string commandString = "select C.*, P.P_Start || ' - ' || P.P_End as PT기간, TRUNC(P.P_End - SYSDATE) as PT남은일수 from consumer C join program P on C.U_NO = P.U_NO and C.U_NO = " + select;
+            string commandString = "SELECT C.U_NO as 회원번호, C.cname as 이름, C.cage as 나이, C.cheight as 키, C.cweight as 몸무게, C.phone as 전화번호, P.P_Start || ' - ' || P.P_End as PT기간, TRUNC(P.P_End - SYSDATE) as PT남은일수 FROM consumer C JOIN program P ON C.U_NO = P.U_NO AND C.U_NO = " + select;
+
             DBAdapter = new OracleDataAdapter(commandString, connectionString);
             MyCommandBuilder = new OracleCommandBuilder(DBAdapter);
             DS = new DataSet();
+
+            // DataTable에 데이터를 채워줍니다.
+            DBAdapter.Fill(DS, "consumer");
+            ConsumerTable = DS.Tables["consumer"];
         }
         catch (DataException DE)
         {
             MessageBox.Show(DE.Message);
         }
     }
+
 
 
     public void DB_ObjCreate()
