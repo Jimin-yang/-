@@ -44,6 +44,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtweight = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,11 +188,29 @@
             this.label1.TabIndex = 104;
             this.label1.Text = "회원 상세 페이지";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(282, 206);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.TabIndex = 124;
+            this.label2.Text = "몸무게";
+            // 
+            // txtweight
+            // 
+            this.txtweight.Location = new System.Drawing.Point(361, 203);
+            this.txtweight.Name = "txtweight";
+            this.txtweight.Size = new System.Drawing.Size(100, 21);
+            this.txtweight.TabIndex = 125;
+            // 
             // 회원상세
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 481);
+            this.Controls.Add(this.txtweight);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.DAOpenBtn);
             this.Controls.Add(this.DBGrid);
             this.Controls.Add(this.UpdateBtn);
@@ -233,5 +253,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtweight;
     }
 }

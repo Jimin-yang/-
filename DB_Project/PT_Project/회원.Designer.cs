@@ -47,7 +47,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(575, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(922, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,6 +69,7 @@
             // 
             this.name.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.name.Enabled = false;
+            this.name.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(71, 23);
             // 
@@ -83,11 +84,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 309);
+            this.ClientSize = new System.Drawing.Size(922, 569);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "회원";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

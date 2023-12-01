@@ -15,6 +15,7 @@ namespace PT_Project
         loginF _parent;
         식단작성 MenuInput;
         회원상세 UserDetail;
+        회원평점조회 UserRating;
         public 회원(loginF loginF)
         {
             InitializeComponent();
@@ -41,7 +42,7 @@ namespace PT_Project
 
         private void 회원상세페이지ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (UserDetail == null || UserDetail.IsDisposed)  //Form4
+            if (UserDetail == null || UserDetail.IsDisposed)  //Form5
             {
                 UserDetail = new 회원상세(_parent.getusernumber);
                 UserDetail.MdiParent = this;
@@ -50,7 +51,12 @@ namespace PT_Project
         }
         private void 평점조회ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (UserRating == null || UserRating.IsDisposed)  //Form5
+            {
+                UserRating = new 회원평점조회(_parent.getusernumber);
+                UserRating.MdiParent = this;
+                UserRating.Show();
+            }
         }
     }
 }
