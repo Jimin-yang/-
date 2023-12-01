@@ -76,6 +76,7 @@ C:\Users\User\Desktop\DB_C_Project\DB_Project\PT_Project\obj\Debug\PT_Project.cs
 C:\Users\User\Desktop\DB_C_Project\DB_Project\PT_Project\obj\Debug\PT_Project.exe
 C:\Users\User\Desktop\DB_C_Project\DB_Project\PT_Project\obj\Debug\PT_Project.pdb
 C:\Users\User\Desktop\DB_C_Project\DB_Project\PT_Project\obj\Debug\PT_Project.loginF.resources
+<<<<<<< Updated upstream
 C:\Users\User\Desktop\C_Project\DB_Project\PT_Project\bin\Debug\PT_Project.exe.config
 C:\Users\User\Desktop\C_Project\DB_Project\PT_Project\bin\Debug\PT_Project.exe
 C:\Users\User\Desktop\C_Project\DB_Project\PT_Project\bin\Debug\PT_Project.pdb
@@ -96,3 +97,25 @@ C:\Users\User\Desktop\C_Project\DB_Project\PT_Project\obj\Debug\PT_Project.cspro
 C:\Users\User\Desktop\C_Project\DB_Project\PT_Project\obj\Debug\PT_Project.exe
 C:\Users\User\Desktop\C_Project\DB_Project\PT_Project\obj\Debug\PT_Project.pdb
 C:\Users\User\Desktop\C_Project\DB_Project\PT_Project\obj\Debug\PT_Project.회원평점조회.resources
+=======
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\bin\Debug\PT_Project.exe.config
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\bin\Debug\PT_Project.exe
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\bin\Debug\PT_Project.pdb
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\bin\Debug\Oracle.DataAccess.dll
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.loginF.resources
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.회원.resources
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.트레이너.resources
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.식단작성.resources
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.회원상세.resources
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.회원관리.resources
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.프로그램관리.resources
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.프로그램관리2.resources
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.Properties.Resources.resources
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.csproj.GenerateResource.cache
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.csproj.CopyComplete
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.exe
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.pdb
+C:\Users\User\Desktop\DB\DB_Project\PT_Project\obj\Debug\PT_Project.트레이너_상세페이지.resources
+>>>>>>> Stashed changes

@@ -40,7 +40,7 @@ namespace PT_Project
             {
                 using (OracleConnection odpConn = new OracleConnection())
                 {
-                    odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+                    odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = COM4-019)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
                     odpConn.Open();
                     using (OracleCommand cmd = new OracleCommand("SELECT * FROM consumer WHERE U_NO = :usernumber", odpConn))
                     {
@@ -71,7 +71,7 @@ namespace PT_Project
             {
                 using (OracleConnection odpConn = new OracleConnection())
                 {
-                    odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+                    odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = COM4-019)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
                     odpConn.Open();
                     using (OracleCommand cmd = new OracleCommand("SELECT * FROM trainer  WHERE T_NO = :usernumber", odpConn))
                     {

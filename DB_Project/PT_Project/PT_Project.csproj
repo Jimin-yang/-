@@ -57,6 +57,12 @@
     <Compile Include="로그인.Designer.cs">
       <DependentUpon>로그인.cs</DependentUpon>
     </Compile>
+    <Compile Include="트레이너_상세페이지.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="트레이너_상세페이지.Designer.cs">
+      <DependentUpon>트레이너_상세페이지.cs</DependentUpon>
+    </Compile>
     <Compile Include="회원.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <EmbeddedResource Include="로그인.resx">
       <DependentUpon>로그인.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="트레이너_상세페이지.resx">
+      <DependentUpon>트레이너_상세페이지.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="회원.resx">
       <DependentUpon>회원.cs</DependentUpon>

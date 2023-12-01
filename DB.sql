@@ -47,11 +47,11 @@ insert into trainer values(2003,'성윤','010-1032-0982','12년차')
 /
 insert into trainer values(2004,'로니','010-2432-6842','20년차')
 /
-insert into consumerDiet values(1001,'2023-11-11',3001,2003,'아침-닭가슴살100g 점심-단백질보충제 저녁 -계란 2개',null,null)
+insert into consumerDiet values(1001,'2023-11-11',3001,2003,'아침 - 닭가슴살100g@점심 - 단백질보충제@저녁 - 계란 2개',null,null)
 /
-insert into consumerDiet values(1001,'2023-11-12',3001,2003,'아침-닭가슴살100g 점심-단백질보충제 저녁 -계란 2개',5,'너무 잘하셨어요.')
+insert into consumerDiet values(1001,'2023-11-12',3001,2003,'아침-닭가슴살100g@점심-단백질보충제@저녁 - 계란 2개',5,'너무 잘하셨어요.')
 /
-insert into consumerDiet values(1003,'2023-11-11',3002,2004,'아침-닭가슴살100g 점심-단백질보충제 저녁 -계란 2개',null,null)
+insert into consumerDiet values(1003,'2023-11-11',3002,2004,'아침-닭가슴살100g@점심-단백질보충제@저녁 - 계란 2개',null,null)
 /
-insert into consumerDiet values(1004,'2023-11-11',3003,2003,'아침-닭가슴살100g 점심-단백질보충제 저녁 -계란 2개',null,null)
+insert into consumerDiet values(1004,'2023-11-11',3003,2003,'아침-닭가슴살100g@점심-단백질보충제@저녁 - 계란 2개',null,null)
 /

@@ -15,6 +15,7 @@ namespace PT_Project
         loginF _parent;
         회원관리 UserManagement;
         프로그램관리 ProgramManagement;
+        트레이너_상세페이지 trainerManagement;
         public 트레이너(loginF loginF)
         {
             InitializeComponent();
@@ -49,6 +50,16 @@ namespace PT_Project
             UserManagement = new 회원관리(_parent.getusernumber);
             UserManagement.MdiParent = this;
             UserManagement.Show();
+        }
+
+        private void 상세페이지_Click(object sender, EventArgs e)
+        {
+            if (trainerManagement == null || trainerManagement.IsDisposed)  //Form4
+            {
+                trainerManagement = new 트레이너_상세페이지(_parent.getusernumber);
+                trainerManagement.MdiParent = this;
+                trainerManagement.Show();
+            }
         }
     }
 }
