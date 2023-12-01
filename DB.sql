@@ -7,7 +7,7 @@ create table consumerDiet ( U_NO  number(20), P_date date,  P_NO number(20), T_N
 /
 create table trainer ( T_NO number(20) primary key, T_Name varchar(20),  T_PhoneNum varchar(20), T_Career varchar(100))
 /
-create table consumer(U_NO number(20) primary key, cname varchar(20), cage varchar(20), cheight varchar(10), phone varchar(20), cptdate varchar(30), cptlastdate varchar(20))
+create table consumer(U_NO number(20) primary key, cname varchar(20), cage varchar(20), cheight varchar(10), phone varchar(20))
 /
 create table program(P_NO number(20) primary key, U_NO number(20), T_NO number(20), P_Contract date, P_Start date, P_End date, P_Outline varchar(70), P_Demand varchar(70))
 /
