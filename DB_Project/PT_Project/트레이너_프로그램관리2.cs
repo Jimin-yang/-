@@ -84,7 +84,7 @@ namespace PT_Project
         }
         private void initialTextBoxes()
         {
-             odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = COM4-019)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+             odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
              odpConn.Open();
             int getID =  _parent.getintID;
             OracleCommand OraCmd = new OracleCommand("SELECT * FROM program WHERE P_NO= :p_id",  odpConn);
@@ -106,7 +106,7 @@ namespace PT_Project
         }
         private int INSERTRow()
         {
-             odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-019)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+             odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
              odpConn.Open();
             int i_P_NO = Convert.ToInt32( P_NO.Text.Trim());
             int i_U_NO = Convert.ToInt32( U_NO.Text.Trim());
@@ -137,7 +137,7 @@ namespace PT_Project
         }
         private int UPDATERow()
         {
-             odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-019)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+             odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
              odpConn.Open();
             int i_P_NO = Convert.ToInt32( P_NO.Text);
             string s_P_Contract =  P_Contract.Text.Trim();
@@ -162,7 +162,7 @@ namespace PT_Project
         }
         private int DELETERow()
         {
-             odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-019)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+             odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
              odpConn.Open();
             int getID =  _parent.getintID;
             OracleCommand OraCmd = new OracleCommand("DELETE FROM program WHERE P_NO = :id",  odpConn);

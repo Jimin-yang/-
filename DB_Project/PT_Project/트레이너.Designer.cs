@@ -46,23 +46,22 @@
             this.상세페이지});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(999, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1427, 36);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // 회원관리
             // 
             this.회원관리.Name = "회원관리";
-            this.회원관리.Size = new System.Drawing.Size(99, 23);
+            this.회원관리.Size = new System.Drawing.Size(148, 31);
             this.회원관리.Text = "회원 식단 관리";
             this.회원관리.Click += new System.EventHandler(this.회원관리_Click);
             // 
             // 프로그램추가
             // 
             this.프로그램추가.Name = "프로그램추가";
-            this.프로그램추가.Size = new System.Drawing.Size(112, 23);
-            this.프로그램추가.Text = "PT 회원정보 관리";
+            this.프로그램추가.Size = new System.Drawing.Size(234, 31);
+            this.프로그램추가.Text = "PT 프로그램 수정 및 관리";
             this.프로그램추가.Click += new System.EventHandler(this.프로그램추가_Click);
             // 
             // name
@@ -71,23 +70,22 @@
             this.name.Enabled = false;
             this.name.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(71, 23);
+            this.name.Size = new System.Drawing.Size(100, 31);
             // 
             // 상세페이지
             // 
             this.상세페이지.Name = "상세페이지";
-            this.상세페이지.Size = new System.Drawing.Size(131, 23);
+            this.상세페이지.Size = new System.Drawing.Size(196, 31);
             this.상세페이지.Text = "트레이너 상세페이지";
             this.상세페이지.Click += new System.EventHandler(this.상세페이지_Click);
             // 
             // 트레이너
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 482);
+            this.ClientSize = new System.Drawing.Size(1427, 723);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "트레이너";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "트레이너";

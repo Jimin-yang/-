@@ -59,7 +59,7 @@ namespace PT_Project
             {
                 string updateQuery = "UPDATE consumer SET cname = :이름, cage = :나이, cheight = :키, cweight = :몸무게, phone = :전화번호 WHERE U_NO = :회원번호";
 
-                using (OracleConnection connection = new OracleConnection("User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-018)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) )"))
+                using (OracleConnection connection = new OracleConnection("User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) )"))
                 {
                     connection.Open();
 

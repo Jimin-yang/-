@@ -25,7 +25,7 @@ namespace PT_Project
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-019)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+            odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
             odpConn.Open();
             OracleCommand OraCmd = new OracleCommand("UPDATE trainer SET T_Name=:T_Name, T_PhoneNum=:T_PhoneNum, T_Career=:T_Career WHERE T_NO= :T_NO", odpConn);
             OraCmd.Parameters.Add("T_Name", OracleDbType.Varchar2, 20).Value = txtName.Text.Trim();
@@ -39,7 +39,7 @@ namespace PT_Project
 
         private void 트레이너_상세페이지_Load(object sender, EventArgs e)
         {
-            OracleConnection myConnection = new OracleConnection("User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = COM4-019)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) );");
+            OracleConnection myConnection = new OracleConnection("User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) );");
             string commandString = string.Concat("select T_Name, T_PhoneNum, T_Career from trainer where T_NO = ", SelectID.ToString());
             OracleCommand myCommand = new OracleCommand()
             {
