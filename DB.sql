@@ -31,8 +31,8 @@ CREATE TABLE program (
     P_Contract DATE,
     P_Start DATE,
     P_End DATE,
-    P_Outline VARCHAR(70),
-    P_Demand VARCHAR(70),
+    P_Outline VARCHAR(100),
+    P_Demand VARCHAR(100),
     CONSTRAINT FK_program_Consumer FOREIGN KEY (U_NO) REFERENCES consumer(U_NO),
     CONSTRAINT FK_program_Trainer FOREIGN KEY (T_NO) REFERENCES trainer(T_NO)
 );
@@ -75,13 +75,13 @@ insert into trainer values(2003,'성윤','010-1032-0982','12년차');
 insert into trainer values(2004,'로니','010-2432-6842','20년차');
 
 -- program 테이블 추가
-insert into program values(3001,1001,2003,'2003-08-28','2023-08-29','2024-04-12','취미반pt','주 5일 운동 아침-닭가슴살100g100g 저녁-고구마2개');
+insert into program values(3001,1001,2003,'2003-08-28','2023-08-29','2024-04-12','취미반pt','주 5일 운동 아침-닭가슴살100g 저녁-고구마2개');
 insert into program values(3002,1003,2004,'2023-09-27','2023-09-28','2024-03-12','선수반pt','주 6일 운동 아침-고구마1개,바나나 점심-단백질보충제');
-insert into program values(3003,1004,2003,'2023-08-11','2023-08-12','2024-01-11','취미반pt','주 5일 운동 아침-닭가슴살100g50g 점심-현미밥1공기');
+insert into program values(3003,1004,2003,'2023-08-11','2023-08-12','2024-01-11','취미반pt','주 5일 운동 아침-닭가슴살100g 점심-현미밥1공기');
 insert into program values(3004,1002,2003,'2023-08-11','2023-08-12','2024-01-11','선수반pt','주 6일 운동 아침-고구마1개,바나나 점심-단백질보충제기');
-insert into program values(3005,1005,2003,'2023-08-11','2023-08-12','2024-01-11','다이어트반pt','주 6일 운동 아침-닭가슴살100g50g 점심-현미밥1공기');
+insert into program values(3005,1005,2003,'2023-08-11','2023-08-12','2024-01-11','다이어트반pt','주 6일 운동 아침-닭가슴살100g 점심-현미밥1공기');
 insert into program values(3006,1006,2003,'2023-08-11','2023-08-12','2024-01-11','다이어트반pt','주 6일 운동아침-고구마1개,바나나 점심-단백질보충제기');
-insert into program values(3007,1007,2003,'2023-08-11','2023-08-12','2024-01-11','취미반pt','주 4일 운동 아침-닭가슴살100g50g 점심-현미밥1공기');
+insert into program values(3007,1007,2003,'2023-08-11','2023-08-12','2024-01-11','취미반pt','주 4일 운동 아침-닭가슴살100g 점심-현미밥1공기');
 insert into program values(3008,1008,2001,'2023-12-08','2023-12-12','2024-06-08','다이어트반pt','주 6일 운동 아침-차, 간식-과일');
 insert into program values(3009,1009,2002,'2023-12-09','2023-12-13','2024-06-09','선수반pt','주 5일 운동 아침-닭가슴살, 점심-채소샐러드');
 insert into program values(3010,1010,2004,'2023-12-10','2023-12-14','2024-06-10','다이어트반pt','주 6일 운동 아침-토마토, 간식-단백질보충제');
