@@ -73,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(508, 28);
+            this.label1.Location = new System.Drawing.Point(908, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(461, 18);
             this.label1.TabIndex = 1;
@@ -87,14 +87,14 @@
             this.DBGrid.Name = "DBGrid";
             this.DBGrid.RowHeadersWidth = 62;
             this.DBGrid.RowTemplate.Height = 30;
-            this.DBGrid.Size = new System.Drawing.Size(934, 366);
+            this.DBGrid.Size = new System.Drawing.Size(1334, 520);
             this.DBGrid.TabIndex = 0;
             // 
             // 프로그램관리
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 464);
+            this.ClientSize = new System.Drawing.Size(1397, 616);
             this.Controls.Add(this.DBGrid);
             this.Controls.Add(this.label1);
             this.Name = "프로그램관리";

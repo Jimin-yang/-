@@ -47,8 +47,7 @@
             this.평점조회ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1351, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1351, 37);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,8 +76,8 @@
             // 평점조회ToolStripMenuItem
             // 
             this.평점조회ToolStripMenuItem.Name = "평점조회ToolStripMenuItem";
-            this.평점조회ToolStripMenuItem.Size = new System.Drawing.Size(106, 31);
-            this.평점조회ToolStripMenuItem.Text = "평점 조회";
+            this.평점조회ToolStripMenuItem.Size = new System.Drawing.Size(148, 31);
+            this.평점조회ToolStripMenuItem.Text = "식단 평점 조회";
             this.평점조회ToolStripMenuItem.Click += new System.EventHandler(this.평점조회ToolStripMenuItem_Click);
             // 
             // 회원

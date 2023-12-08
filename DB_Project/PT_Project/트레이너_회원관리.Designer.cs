@@ -31,6 +31,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.회원번호 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.회원이름 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.남은일수 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.DBGrid = new System.Windows.Forms.DataGridView();
             this.searchBtn2 = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.남은일수 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -83,6 +83,11 @@
             // 
             this.회원이름.Text = "회원이름";
             this.회원이름.Width = 70;
+            // 
+            // 남은일수
+            // 
+            this.남은일수.Text = "PT 남은일수";
+            this.남은일수.Width = 100;
             // 
             // checkBox1
             // 
@@ -305,16 +310,11 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "▶";
             // 
-            // 남은일수
-            // 
-            this.남은일수.Text = "PT 남은일수";
-            this.남은일수.Width = 100;
-            // 
             // 회원관리
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1394, 602);
+            this.ClientSize = new System.Drawing.Size(1397, 616);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label5);
