@@ -22,50 +22,27 @@ namespace PT_Project
             SelectID = selectID;
         }
 
-        private void searchBtn1_Click(object sender, EventArgs e)
-        {
-             listView1.Items.Clear();
-            OracleConnection myConnection = new OracleConnection("User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) );");
-            string commandString = string.Concat("select P.U_NO, C.cname, TRUNC(P.P_End - SYSDATE) from program P, consumer C where P.U_NO = C.U_NO and P.T_NO = ",  SelectID.ToString());
-            OracleCommand myCommand = new OracleCommand()
-            {
-                Connection = myConnection,
-                CommandText = commandString
-            };
-            myConnection.Open();
-            OracleDataReader MR = myCommand.ExecuteReader();
-            while (MR.Read())
-            {
-                ListViewItem item = new ListViewItem(MR[0].ToString());
-                item.SubItems.Add(MR[1].ToString());
-                item.SubItems.Add(MR[2].ToString());
-                listView1.Items.Add(item);
-            }
-            MR.Close();
-            myConnection.Close();
-        }
-
         private void searchBtn2_Click(object sender, EventArgs e)
         {
             try
             {
                 if ( checkBox1.Checked)
                 {
-                     Btn.Text = "수정";
-                     odpConn.ConnectionString = "User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION =   (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))   (CONNECT_DATA =     (SERVER = DEDICATED)     (SERVICE_NAME = xe)   ) );";
-                     odpConn.Open();
+                    Btn.Text = "수정";
+                    odpConn.ConnectionString = "User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION =   (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))   (CONNECT_DATA =     (SERVER = DEDICATED)     (SERVICE_NAME = xe)   ) );";
+                    odpConn.Open();
                     OracleDataAdapter oda = new OracleDataAdapter()
                     {
-                        SelectCommand = new OracleCommand(string.Concat("select U_NO as 회원번호, P_date as 작성일자 from consumerDiet where P_Grade != 0 and U_NO = ",  SelectConsumerID.ToString()),  odpConn)
+                        SelectCommand = new OracleCommand(string.Concat("select P.U_NO as 회원번호, CD.P_date as 작성일자 from consumerDiet CD, program P  where P.P_NO = CD.P_NO and CD.P_Grade IS NOT NULL and P.U_NO = ", SelectConsumerID.ToString()), odpConn)
                     };
                     DataTable dt = new DataTable();
                     oda.Fill(dt);
-                     odpConn.Close();
-                     DBGrid.DataSource = dt;
-                     DBGrid.AutoResizeColumns();
-                     DBGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                     DBGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                     DBGrid.AllowUserToAddRows = false;
+                    odpConn.Close();
+                    DBGrid.DataSource = dt;
+                    DBGrid.AutoResizeColumns();
+                    DBGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    DBGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    DBGrid.AllowUserToAddRows = false;
                 }
                 else
                 {
@@ -74,16 +51,16 @@ namespace PT_Project
                      odpConn.Open();
                     OracleDataAdapter oda = new OracleDataAdapter()
                     {
-                        SelectCommand = new OracleCommand(string.Concat("select U_NO as 회원번호, P_date as 작성일자 from consumerDiet where P_Grade IS NULL and U_NO = ",  SelectConsumerID.ToString()),  odpConn)
+                        SelectCommand = new OracleCommand(string.Concat("select P.U_NO as 회원번호, CD.P_date as 작성일자 from consumerDiet CD, program P  where P.P_NO = CD.P_NO and CD.P_Grade IS NULL and P.U_NO = ",  SelectConsumerID.ToString()),  odpConn)
                     };
                     DataTable dt = new DataTable();
                     oda.Fill(dt);
-                     odpConn.Close();
-                     DBGrid.DataSource = dt;
-                     DBGrid.AutoResizeColumns();
-                     DBGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                     DBGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                     DBGrid.AllowUserToAddRows = false;
+                    odpConn.Close();
+                    DBGrid.DataSource = dt;
+                    DBGrid.AutoResizeColumns();
+                    DBGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    DBGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    DBGrid.AllowUserToAddRows = false;
                 }
             }
             catch (Exception exception)
@@ -103,7 +80,7 @@ namespace PT_Project
                 day.Text = selectDATE;
                 odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
                 odpConn.Open();
-                OracleCommand OraCmd = new OracleCommand("SELECT P_Menu, P_Grade, P_Feedback FROM consumerDiet WHERE U_NO= :U_NO and P_date =:P_date",  odpConn);
+                OracleCommand OraCmd = new OracleCommand("SELECT CD.P_Menu, CD.P_Grade, CD.P_Feedback FROM consumerDiet CD, Program P WHERE P.P_NO = CD.P_NO and P.U_NO= :U_NO and CD.P_date =:P_date",  odpConn);
                 OraCmd.Parameters.Add("U_NO", OracleDbType.Int32).Value = selectID;
                 OraCmd.Parameters.Add("P_date", OracleDbType.Date).Value = selectDATE;
                 OracleDataReader odr = OraCmd.ExecuteReader();
@@ -148,7 +125,7 @@ namespace PT_Project
                      textBox1.Text = Convert.ToString(odr.GetValue(2));
                 }
                 odr.Close();
-                 odpConn.Close();
+                odpConn.Close();
             }
             else
             {
@@ -160,10 +137,10 @@ namespace PT_Project
                 r5.Checked = false;
                 int selectID = Convert.ToInt32( DBGrid.SelectedCells[0].Value);
                 string selectDATE =  DBGrid.SelectedCells[1].Value.ToString().Substring(0, 11);
-                 day.Text = selectDATE;
-                 odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
-                 odpConn.Open();
-                OracleCommand OraCmd = new OracleCommand("SELECT P_Menu FROM consumerDiet WHERE U_NO= :U_NO and P_date =:P_date",  odpConn);
+                day.Text = selectDATE;
+                odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+                odpConn.Open();
+                OracleCommand OraCmd = new OracleCommand("SELECT CD.P_Menu FROM consumerDiet CD, Program P WHERE P.P_NO = CD.P_NO and P.U_NO= :U_NO and CD.P_date =:P_date", odpConn);
                 OraCmd.Parameters.Add("U_NO", OracleDbType.Int32).Value = selectID;
                 OraCmd.Parameters.Add("P_date", OracleDbType.Date).Value = selectDATE;
                 OracleDataReader odr = OraCmd.ExecuteReader();
@@ -179,7 +156,7 @@ namespace PT_Project
                     menu.Text = "아침 : " + breakfast + "\r\n" + "점심 : " + lunch + "\r\n" + "저녁 : " + dinner;
                 }
                 odr.Close();
-                 odpConn.Close();
+                odpConn.Close();
             }
         }
         public int returnGrade()
@@ -222,8 +199,8 @@ namespace PT_Project
 
         private void Btn_Click(object sender, EventArgs e)
         {
-             odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
-             odpConn.Open();
+            odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+            odpConn.Open();
             int grade =  returnGrade();
             int selectID = Convert.ToInt32( DBGrid.SelectedCells[0].Value);
             string selectDATE =  DBGrid.SelectedCells[1].Value.ToString().Substring(0, 11);
@@ -233,7 +210,7 @@ namespace PT_Project
             OraCmd.Parameters.Add("U_NO", OracleDbType.Int32).Value = selectID;
             OraCmd.Parameters.Add("P_date", OracleDbType.Date).Value = selectDATE;
             OraCmd.ExecuteReader().Close();
-             odpConn.Close();
+            odpConn.Close();
             MessageBox.Show(string.Concat( Btn.Text, "하셨습니다!"));
         }
 
@@ -241,7 +218,7 @@ namespace PT_Project
         {
             listView1.Items.Clear();
             OracleConnection myConnection = new OracleConnection("User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) );");
-            string commandString = string.Concat("select P.U_NO, C.cname, TRUNC(P.P_End - SYSDATE) from program P, consumer C where P.U_NO = C.U_NO and P.T_NO = ", SelectID.ToString());
+            string commandString = string.Concat("select C.U_NO, C.cname, TRUNC(P.P_End - SYSDATE) from program P, consumer C  where P.U_NO = C.U_NO and P.T_NO = ", SelectID.ToString());
             OracleCommand myCommand = new OracleCommand()
             {
                 Connection = myConnection,
