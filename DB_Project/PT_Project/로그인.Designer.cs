@@ -35,28 +35,25 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 27);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(189, 40);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 21);
+            this.textBox1.Size = new System.Drawing.Size(188, 28);
             this.textBox1.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(50, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(62, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "아이디";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(132, 95);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(189, 142);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 53);
+            this.button1.Size = new System.Drawing.Size(189, 80);
             this.button1.TabIndex = 3;
             this.button1.Text = "로그인";
             this.button1.UseVisualStyleBackColor = true;
@@ -64,14 +61,14 @@
             // 
             // loginF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 187);
+            this.ClientSize = new System.Drawing.Size(424, 280);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "loginF";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "로그인";
             this.ResumeLayout(false);
             this.PerformLayout();

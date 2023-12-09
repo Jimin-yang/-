@@ -73,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(908, 28);
+            this.label1.Location = new System.Drawing.Point(887, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(461, 18);
             this.label1.TabIndex = 1;
@@ -87,7 +87,7 @@
             this.DBGrid.Name = "DBGrid";
             this.DBGrid.RowHeadersWidth = 62;
             this.DBGrid.RowTemplate.Height = 30;
-            this.DBGrid.Size = new System.Drawing.Size(1334, 520);
+            this.DBGrid.Size = new System.Drawing.Size(1313, 485);
             this.DBGrid.TabIndex = 0;
             // 
             // 프로그램관리
@@ -99,6 +99,7 @@
             this.Controls.Add(this.label1);
             this.Name = "프로그램관리";
             this.Text = "PT 프로그램 수정 및 관리";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.프로그램관리_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).EndInit();

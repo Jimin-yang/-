@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,15 +14,16 @@ namespace PT_Project
 {
     public partial class 회원관리 : Form
     {
+        트레이너 trainer;
         private int SelectID;
         private int SelectConsumerID = 0;
         private OracleConnection odpConn = new OracleConnection();
-        public 회원관리(int selectID)
+        public 회원관리(트레이너 trainer)
         {
             InitializeComponent();
-            SelectID = selectID;
+            this.trainer = trainer;
+            SelectID = trainer.getusernumber;
         }
-
         private void searchBtn2_Click(object sender, EventArgs e)
         {
             try
@@ -193,8 +195,9 @@ namespace PT_Project
         private void listView1_Click(object sender, EventArgs e)
         {
             string name =  listView1.SelectedItems[0].SubItems[1].Text;
-             searchBtn2.Text = string.Concat(name, "님 식단 조회");
-             SelectConsumerID = Convert.ToInt32( listView1.SelectedItems[0].Text);
+            searchBtn1.Text = string.Concat(name, "님 상세 조회");
+            searchBtn2.Text = string.Concat(name, "님 식단 조회");
+            SelectConsumerID = Convert.ToInt32( listView1.SelectedItems[0].Text);
         }
 
         private void Btn_Click(object sender, EventArgs e)
@@ -218,7 +221,13 @@ namespace PT_Project
         {
             listView1.Items.Clear();
             OracleConnection myConnection = new OracleConnection("User Id=ptadmin; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe) ) );");
-            string commandString = string.Concat("select C.U_NO, C.cname, TRUNC(P.P_End - SYSDATE) from program P, consumer C  where P.U_NO = C.U_NO and P.T_NO = ", SelectID.ToString());
+            string commandString = string.Concat("SELECT C.U_NO, C.cname, ",
+                "CASE WHEN C.cweight / POWER(C.cheight / 100, 2) < 18.5 THEN '저체중' ",
+                "WHEN C.cweight / POWER(C.cheight / 100, 2) >= 18.5 AND C.cweight / POWER(C.cheight / 100, 2) < 24.9 THEN '정상' ",
+                "WHEN C.cweight / POWER(C.cheight / 100, 2) >= 25 AND C.cweight / POWER(C.cheight / 100, 2) < 29.9 THEN '과체중' ",
+                "ELSE '비만' END AS BMI_Category ",
+                "FROM program P, consumer C ",
+                "WHERE P.U_NO = C.U_NO AND P.T_NO = ", SelectID.ToString());
             OracleCommand myCommand = new OracleCommand()
             {
                 Connection = myConnection,
@@ -235,6 +244,10 @@ namespace PT_Project
             }
             MR.Close();
             myConnection.Close();
+        }
+        private void searchBtn1_Click(object sender, EventArgs e)
+        {
+            trainer.open회원관리2(SelectConsumerID);
         }
     }
 }

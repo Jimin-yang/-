@@ -33,11 +33,13 @@ namespace PT_Project
             // 
             // 회원평점조회
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1143, 675);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "회원평점조회";
             this.Text = "회원_평점_조회";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
