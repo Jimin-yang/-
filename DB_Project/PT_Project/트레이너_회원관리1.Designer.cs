@@ -31,7 +31,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.회원번호 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.회원이름 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.남은일수 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.비만도 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.DBGrid = new System.Windows.Forms.DataGridView();
             this.searchBtn2 = new System.Windows.Forms.Button();
@@ -49,6 +49,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.searchBtn1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -64,11 +65,11 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.회원번호,
             this.회원이름,
-            this.남은일수});
+            this.비만도});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(16, 27);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(315, 519);
+            this.listView1.Size = new System.Drawing.Size(315, 474);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -84,10 +85,10 @@
             this.회원이름.Text = "회원이름";
             this.회원이름.Width = 70;
             // 
-            // 남은일수
+            // 비만도
             // 
-            this.남은일수.Text = "PT 남은일수";
-            this.남은일수.Width = 100;
+            this.비만도.Text = "비만도";
+            this.비만도.Width = 100;
             // 
             // checkBox1
             // 
@@ -248,6 +249,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.searchBtn1);
             this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -255,6 +257,16 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "회원 조회";
+            // 
+            // searchBtn1
+            // 
+            this.searchBtn1.Location = new System.Drawing.Point(16, 514);
+            this.searchBtn1.Name = "searchBtn1";
+            this.searchBtn1.Size = new System.Drawing.Size(315, 29);
+            this.searchBtn1.TabIndex = 5;
+            this.searchBtn1.Text = "회원님 상세 조회";
+            this.searchBtn1.UseVisualStyleBackColor = true;
+            this.searchBtn1.Click += new System.EventHandler(this.searchBtn1_Click);
             // 
             // groupBox2
             // 
@@ -322,6 +334,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "회원관리";
             this.Text = "회원 식단 관리";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.회원관리_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -360,6 +373,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ColumnHeader 남은일수;
+        private System.Windows.Forms.ColumnHeader 비만도;
+        private System.Windows.Forms.Button searchBtn1;
     }
 }

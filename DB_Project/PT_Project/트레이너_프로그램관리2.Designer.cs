@@ -210,6 +210,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "프로그램관리2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PT 프로그램 수정 및 관리";
             this.Load += new System.EventHandler(this.프로그램관리2_Load);
             this.ResumeLayout(false);

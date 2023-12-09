@@ -47,7 +47,7 @@
             this.상세페이지});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1427, 37);
+            this.menuStrip1.Size = new System.Drawing.Size(1378, 35);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,9 +84,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1427, 723);
+            this.ClientSize = new System.Drawing.Size(1378, 644);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "트레이너";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "트레이너";

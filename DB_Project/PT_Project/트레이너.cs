@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PT_Project
 {
@@ -14,21 +15,36 @@ namespace PT_Project
     {
         loginF _parent;
         회원관리 UserManagement;
+        트레이너_회원관리2 UserManagement2;
         프로그램관리 ProgramManagement;
         트레이너_상세페이지 trainerManagement;
+        int usernumber;
         public 트레이너(loginF loginF)
         {
             InitializeComponent();
             _parent = loginF;
+            usernumber = _parent.getusernumber;
+        }
+        public int getusernumber
+        {
+            get { return usernumber; }
         }
 
-        
+        public void open회원관리2(int seleteID)
+        {
+            if (UserManagement2 == null || UserManagement2.IsDisposed)  //Form4
+            {
+                UserManagement2 = new 트레이너_회원관리2(seleteID);
+                UserManagement2.ShowDialog();
+                UserManagement2.Dispose();
+            }
 
+        }
         private void 회원관리_Click(object sender, EventArgs e)
         {
             if (UserManagement == null || UserManagement.IsDisposed)  //Form4
             {
-                UserManagement = new 회원관리(_parent.getusernumber);
+                UserManagement = new 회원관리(this);
                 UserManagement.MdiParent = this;
                 UserManagement.Show();
             }
@@ -47,7 +63,7 @@ namespace PT_Project
         private void 트레이너_Load(object sender, EventArgs e)
         {
             name.Text = _parent.getusername + " 님";
-            UserManagement = new 회원관리(_parent.getusernumber);
+            UserManagement = new 회원관리(this);
             UserManagement.MdiParent = this;
             UserManagement.Show();
         }

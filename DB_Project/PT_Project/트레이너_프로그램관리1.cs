@@ -40,10 +40,10 @@ namespace PT_Project
                 return  strCommand;
             }
         }
-        public 프로그램관리(int selectID)
+        public 프로그램관리(int id)
         {
             InitializeComponent();
-            SelectID = selectID;
+            SelectID = id;
         }
         private void showDataGridView()
         {
