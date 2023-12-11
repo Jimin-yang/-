@@ -67,9 +67,10 @@
             this.회원이름,
             this.비만도});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(16, 27);
+            this.listView1.Location = new System.Drawing.Point(11, 18);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(315, 474);
+            this.listView1.Size = new System.Drawing.Size(222, 317);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -93,9 +94,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(22, 521);
+            this.checkBox1.Location = new System.Drawing.Point(15, 347);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(130, 22);
+            this.checkBox1.Size = new System.Drawing.Size(88, 16);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "작성한 평점";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -103,19 +105,21 @@
             // DBGrid
             // 
             this.DBGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DBGrid.Location = new System.Drawing.Point(22, 27);
+            this.DBGrid.Location = new System.Drawing.Point(15, 18);
+            this.DBGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DBGrid.Name = "DBGrid";
             this.DBGrid.RowHeadersWidth = 62;
             this.DBGrid.RowTemplate.Height = 30;
-            this.DBGrid.Size = new System.Drawing.Size(327, 474);
+            this.DBGrid.Size = new System.Drawing.Size(229, 316);
             this.DBGrid.TabIndex = 3;
             this.DBGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DBGrid_CellClick);
             // 
             // searchBtn2
             // 
-            this.searchBtn2.Location = new System.Drawing.Point(168, 517);
+            this.searchBtn2.Location = new System.Drawing.Point(118, 345);
+            this.searchBtn2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchBtn2.Name = "searchBtn2";
-            this.searchBtn2.Size = new System.Drawing.Size(181, 29);
+            this.searchBtn2.Size = new System.Drawing.Size(127, 19);
             this.searchBtn2.TabIndex = 4;
             this.searchBtn2.Text = "식단조회";
             this.searchBtn2.UseVisualStyleBackColor = true;
@@ -124,62 +128,69 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 36);
+            this.label1.Location = new System.Drawing.Point(15, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 18);
+            this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 5;
             this.label1.Text = "날짜";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 79);
+            this.label2.Location = new System.Drawing.Point(15, 53);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 18);
+            this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 6;
             this.label2.Text = "식단내용";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 278);
+            this.label3.Location = new System.Drawing.Point(14, 185);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 18);
+            this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 7;
             this.label3.Text = "평점";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 339);
+            this.label4.Location = new System.Drawing.Point(15, 226);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 18);
+            this.label4.Size = new System.Drawing.Size(41, 12);
             this.label4.TabIndex = 8;
             this.label4.Text = "코멘트";
             // 
             // menu
             // 
             this.menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.menu.Location = new System.Drawing.Point(101, 78);
+            this.menu.Location = new System.Drawing.Point(71, 52);
+            this.menu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(397, 163);
+            this.menu.Size = new System.Drawing.Size(278, 109);
             this.menu.TabIndex = 9;
             // 
             // day
             // 
             this.day.AutoSize = true;
-            this.day.Location = new System.Drawing.Point(99, 36);
+            this.day.Location = new System.Drawing.Point(69, 24);
+            this.day.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.day.Name = "day";
-            this.day.Size = new System.Drawing.Size(106, 18);
+            this.day.Size = new System.Drawing.Size(65, 12);
             this.day.TabIndex = 10;
             this.day.Text = "0000-00-00";
             // 
             // r5
             // 
             this.r5.AutoSize = true;
-            this.r5.Location = new System.Drawing.Point(99, 280);
+            this.r5.Location = new System.Drawing.Point(69, 187);
+            this.r5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.r5.Name = "r5";
-            this.r5.Size = new System.Drawing.Size(61, 22);
+            this.r5.Size = new System.Drawing.Size(41, 16);
             this.r5.TabIndex = 11;
             this.r5.TabStop = true;
             this.r5.Text = "5점";
@@ -188,9 +199,10 @@
             // r4
             // 
             this.r4.AutoSize = true;
-            this.r4.Location = new System.Drawing.Point(175, 280);
+            this.r4.Location = new System.Drawing.Point(122, 187);
+            this.r4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.r4.Name = "r4";
-            this.r4.Size = new System.Drawing.Size(61, 22);
+            this.r4.Size = new System.Drawing.Size(41, 16);
             this.r4.TabIndex = 12;
             this.r4.TabStop = true;
             this.r4.Text = "4점";
@@ -199,9 +211,10 @@
             // r3
             // 
             this.r3.AutoSize = true;
-            this.r3.Location = new System.Drawing.Point(257, 280);
+            this.r3.Location = new System.Drawing.Point(180, 187);
+            this.r3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.r3.Name = "r3";
-            this.r3.Size = new System.Drawing.Size(61, 22);
+            this.r3.Size = new System.Drawing.Size(41, 16);
             this.r3.TabIndex = 13;
             this.r3.TabStop = true;
             this.r3.Text = "3점";
@@ -210,9 +223,10 @@
             // r2
             // 
             this.r2.AutoSize = true;
-            this.r2.Location = new System.Drawing.Point(344, 280);
+            this.r2.Location = new System.Drawing.Point(241, 187);
+            this.r2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.r2.Name = "r2";
-            this.r2.Size = new System.Drawing.Size(61, 22);
+            this.r2.Size = new System.Drawing.Size(41, 16);
             this.r2.TabIndex = 14;
             this.r2.TabStop = true;
             this.r2.Text = "2점";
@@ -221,9 +235,10 @@
             // r1
             // 
             this.r1.AutoSize = true;
-            this.r1.Location = new System.Drawing.Point(426, 280);
+            this.r1.Location = new System.Drawing.Point(298, 187);
+            this.r1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.r1.Name = "r1";
-            this.r1.Size = new System.Drawing.Size(61, 22);
+            this.r1.Size = new System.Drawing.Size(41, 16);
             this.r1.TabIndex = 15;
             this.r1.TabStop = true;
             this.r1.Text = "1점";
@@ -231,17 +246,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 339);
+            this.textBox1.Location = new System.Drawing.Point(71, 226);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(396, 153);
+            this.textBox1.Size = new System.Drawing.Size(278, 103);
             this.textBox1.TabIndex = 16;
             // 
             // Btn
             // 
-            this.Btn.Location = new System.Drawing.Point(344, 517);
+            this.Btn.Location = new System.Drawing.Point(241, 345);
+            this.Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn.Name = "Btn";
-            this.Btn.Size = new System.Drawing.Size(154, 29);
+            this.Btn.Size = new System.Drawing.Size(108, 19);
             this.Btn.TabIndex = 17;
             this.Btn.Text = "추가";
             this.Btn.UseVisualStyleBackColor = true;
@@ -251,18 +268,21 @@
             // 
             this.groupBox1.Controls.Add(this.searchBtn1);
             this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(8, 8);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(350, 564);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(245, 376);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "회원 조회";
             // 
             // searchBtn1
             // 
-            this.searchBtn1.Location = new System.Drawing.Point(16, 514);
+            this.searchBtn1.Location = new System.Drawing.Point(11, 343);
+            this.searchBtn1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchBtn1.Name = "searchBtn1";
-            this.searchBtn1.Size = new System.Drawing.Size(315, 29);
+            this.searchBtn1.Size = new System.Drawing.Size(220, 19);
             this.searchBtn1.TabIndex = 5;
             this.searchBtn1.Text = "회원님 상세 조회";
             this.searchBtn1.UseVisualStyleBackColor = true;
@@ -273,9 +293,11 @@
             this.groupBox2.Controls.Add(this.DBGrid);
             this.groupBox2.Controls.Add(this.searchBtn2);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(416, 12);
+            this.groupBox2.Location = new System.Drawing.Point(291, 8);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(372, 564);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(260, 376);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "식단 조회";
@@ -284,9 +306,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(370, 281);
+            this.label5.Location = new System.Drawing.Point(259, 187);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 28);
+            this.label5.Size = new System.Drawing.Size(28, 19);
             this.label5.TabIndex = 20;
             this.label5.Text = "▶";
             // 
@@ -305,9 +328,11 @@
             this.groupBox3.Controls.Add(this.r2);
             this.groupBox3.Controls.Add(this.r4);
             this.groupBox3.Controls.Add(this.r3);
-            this.groupBox3.Location = new System.Drawing.Point(840, 12);
+            this.groupBox3.Location = new System.Drawing.Point(588, 8);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(525, 564);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(367, 376);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "식단 작성";
@@ -316,22 +341,24 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(794, 286);
+            this.label6.Location = new System.Drawing.Point(556, 191);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 28);
+            this.label6.Size = new System.Drawing.Size(28, 19);
             this.label6.TabIndex = 22;
             this.label6.Text = "▶";
             // 
             // 회원관리
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1397, 616);
+            this.ClientSize = new System.Drawing.Size(978, 411);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "회원관리";
             this.Text = "회원 식단 관리";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
