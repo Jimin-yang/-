@@ -71,19 +71,24 @@ namespace PT_Project
 
         private double CalculateAverageRating(DataTable table)
         {
-            if (table.Rows.Count == 0)
-                return 0;
-
+            int count = 0;
             double totalRating = 0;
 
             foreach (DataRow row in table.Rows)
             {
                 if (row["P_Grade"] != DBNull.Value)
+                {
                     totalRating += Convert.ToDouble(row["P_Grade"]);
+                    count++;
+                }
             }
 
-            return totalRating / table.Rows.Count;
+            if (count == 0)
+                return 0;
+
+            return totalRating / count;
         }
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
