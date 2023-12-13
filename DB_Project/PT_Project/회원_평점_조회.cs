@@ -23,9 +23,10 @@ namespace PT_Project
             conn.Open();
 
             string query = $"SELECT program.P_NO, T_Name as 트레이너, P_date as 작성날짜, P_Grade, P_Feedback FROM consumerDiet " +
-                           "INNER JOIN program ON consumerDiet.P_NO = program.P_NO " +
-                           "INNER JOIN trainer ON program.T_NO = trainer.T_NO " +
-                           $"WHERE program.U_NO = {SelectID}";
+               "INNER JOIN program ON consumerDiet.P_NO = program.P_NO " +
+               "INNER JOIN trainer ON program.T_NO = trainer.T_NO " +
+               $"WHERE program.U_NO = {SelectID} AND consumerDiet.P_Grade IS NOT NULL";
+
 
             if (checkBox1.Checked)
             {
