@@ -16,6 +16,7 @@ namespace PT_Project
         식단작성 MenuInput;
         회원상세 UserDetail;
         회원평점조회 UserRating;
+        
         public 회원(loginF loginF)
         {
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace PT_Project
         private void 회원_Load(object sender, EventArgs e)
         {
             name.Text = _parent.getusername + "님";
-            MenuInput = new 식단작성();
+            MenuInput = new 식단작성(_parent);
             MenuInput.MdiParent = this;
             MenuInput.Show();
         }
@@ -34,7 +35,7 @@ namespace PT_Project
         {
             if (MenuInput == null || MenuInput.IsDisposed)  //Form4
             {
-                MenuInput = new 식단작성();
+                MenuInput = new 식단작성(_parent);
                 MenuInput.MdiParent = this;
                 MenuInput.Show();
             }
@@ -58,5 +59,7 @@ namespace PT_Project
                 UserRating.Show();
             }
         }
+
+       
     }
 }

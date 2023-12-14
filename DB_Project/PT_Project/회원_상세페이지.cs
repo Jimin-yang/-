@@ -132,5 +132,10 @@ namespace PT_Project
             catch (Exception DE)
             { MessageBox.Show(DE.Message); }
         }
+
+        private void 회원상세_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -71,7 +71,7 @@ namespace PT_Project
             {
                 using (OracleConnection odpConn = new OracleConnection())
                 {
-                    odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
+                    odpConn.ConnectionString = "User Id = ptadmin; Password = 1111; Data Source = (DESCRIPTION = (ADDRESS =(PROTOCOL = TCP)(HOST=DESKTOP-M7OKFI9)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); ";
                     odpConn.Open();
                     using (OracleCommand cmd = new OracleCommand("SELECT * FROM trainer  WHERE T_NO = :usernumber", odpConn))
                     {
@@ -103,6 +103,7 @@ namespace PT_Project
             {
                 MessageBox.Show(username + " 회원님 로그인 성공!");
                 회원 form2 = new 회원(this);
+  
                 this.Hide();
                 form2.ShowDialog();
                 this.Close();
@@ -119,6 +120,11 @@ namespace PT_Project
             {
                 MessageBox.Show("로그인 실패. 올바른 사용자 이름과 비밀번호를 입력하세요.");
             }
+        }
+
+        private void loginF_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

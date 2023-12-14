@@ -50,7 +50,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="appendform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="appendform.Designer.cs">
+      <DependentUpon>appendform.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBClass.cs" />
+    <Compile Include="회원_식단작성2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="회원_식단작성2.Designer.cs">
+      <DependentUpon>회원_식단작성2.cs</DependentUpon>
+    </Compile>
     <Compile Include="로그인.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,9 @@
     <Compile Include="회원_평점_조회.Designer.cs">
       <DependentUpon>회원_평점_조회.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="appendform.resx">
+      <DependentUpon>appendform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="로그인.resx">
       <DependentUpon>로그인.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +173,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="회원_식단작성2.resx">
+      <DependentUpon>회원_식단작성2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="회원_평점_조회.resx">
       <DependentUpon>회원_평점_조회.cs</DependentUpon>
     </EmbeddedResource>

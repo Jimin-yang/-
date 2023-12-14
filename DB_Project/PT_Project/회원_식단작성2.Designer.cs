@@ -47,6 +47,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(204, 50);
             this.textBox1.TabIndex = 3;
+          
             // 
             // textBox2
             // 
@@ -55,6 +56,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(204, 50);
             this.textBox2.TabIndex = 4;
+         
             // 
             // textBox3
             // 
@@ -63,6 +65,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(204, 50);
             this.textBox3.TabIndex = 5;
+       
             // 
             // label2
             // 
@@ -72,6 +75,7 @@
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 6;
             this.label2.Text = "아침";
+           
             // 
             // label3
             // 
@@ -81,6 +85,7 @@
             this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 7;
             this.label3.Text = "점심";
+       
             // 
             // label4
             // 
@@ -90,6 +95,7 @@
             this.label4.Size = new System.Drawing.Size(29, 12);
             this.label4.TabIndex = 8;
             this.label4.Text = "저녁";
+       
             // 
             // button1
             // 
