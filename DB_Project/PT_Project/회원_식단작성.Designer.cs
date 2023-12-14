@@ -79,7 +79,7 @@
             // txt_demand
             // 
             this.txt_demand.Location = new System.Drawing.Point(287, 170);
-            this.txt_demand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_demand.Margin = new System.Windows.Forms.Padding(4);
             this.txt_demand.Multiline = true;
             this.txt_demand.Name = "txt_demand";
             this.txt_demand.ReadOnly = true;
@@ -109,7 +109,7 @@
             // append_btn
             // 
             this.append_btn.Location = new System.Drawing.Point(747, 260);
-            this.append_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.append_btn.Margin = new System.Windows.Forms.Padding(4);
             this.append_btn.Name = "append_btn";
             this.append_btn.Size = new System.Drawing.Size(107, 34);
             this.append_btn.TabIndex = 36;
@@ -120,7 +120,7 @@
             // delete_btn
             // 
             this.delete_btn.Location = new System.Drawing.Point(1084, 260);
-            this.delete_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delete_btn.Margin = new System.Windows.Forms.Padding(4);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(107, 34);
             this.delete_btn.TabIndex = 38;
@@ -154,9 +154,9 @@
             this.groupBox1.Controls.Add(this.serch_btn);
             this.groupBox1.Controls.Add(this.txt_search);
             this.groupBox1.Location = new System.Drawing.Point(747, 42);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(444, 150);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
@@ -165,7 +165,7 @@
             // serch_btn
             // 
             this.serch_btn.Location = new System.Drawing.Point(290, 68);
-            this.serch_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.serch_btn.Margin = new System.Windows.Forms.Padding(4);
             this.serch_btn.Name = "serch_btn";
             this.serch_btn.Size = new System.Drawing.Size(91, 34);
             this.serch_btn.TabIndex = 1;
@@ -177,7 +177,7 @@
             // 
             this.txt_search.Enabled = false;
             this.txt_search.Location = new System.Drawing.Point(35, 71);
-            this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(4);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(213, 28);
             this.txt_search.TabIndex = 0;
@@ -186,7 +186,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(67, 362);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 23;
@@ -211,7 +211,7 @@
             this.Controls.Add(this.lb_trainerName);
             this.Controls.Add(this.label7);
             this.Name = "식단작성";
-            this.Text = "Form4";
+            this.Text = "식단 작성";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.식단작성_Load);
             this.groupBox1.ResumeLayout(false);
