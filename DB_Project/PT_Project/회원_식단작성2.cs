@@ -15,18 +15,6 @@ using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
-using System;
-using System.Data;
-using System.Linq;
-using System.Windows.Forms;
-using Oracle.DataAccess.Client;
-using System.Net.NetworkInformation;
-
-using Oracle.DataAccess.Client;
-using PT_Project;
-using System;
-using System.Data;
-using System.Windows.Forms;
 
 namespace PT_Project
 {
