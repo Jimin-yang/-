@@ -38,7 +38,7 @@ namespace PT_Project
             userid = loginform.getusernumber;
             dataGridView1.Columns.Clear();
             SetupDataGridViewColumns();
-            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=DESKTOP-M7OKFI9)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
+            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=DESKTOP-localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
             {
                 Odpconn.Open();
                 string strqry = "select * from Consumerdiet where P_NO=:programId";
@@ -112,7 +112,7 @@ namespace PT_Project
 
         private void DeleteConsumerDiet(DateTime selectedDate)
         {
-            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=DESKTOP-M7OKFI9)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
+            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
             {
                 Odpconn.Open();
 
@@ -203,7 +203,7 @@ namespace PT_Project
         }
         private void InsertDataIntoTable(int programNo, DateTime currentTime, string text1, string text2, string text3)
         {
-            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=DESKTOP-M7OKFI9)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
+            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
             {
                 string currentTimeString = currentTime.ToString("yyyy-MM-dd");
                 Odpconn.Open();
@@ -225,7 +225,7 @@ namespace PT_Project
 
         public void RefreshDataGridView()
         {
-            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=DESKTOP-M7OKFI9)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
+            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
             {
                 Odpconn.Open();
                 // 현재 프로그램의 P_NO

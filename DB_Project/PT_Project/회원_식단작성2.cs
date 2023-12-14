@@ -108,7 +108,7 @@ namespace PT_Project
         {
             try
             {
-                string connectionString = "User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=DESKTOP-M7OKFI9)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))";
+                string connectionString = "User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))";
                 string commandString = "SELECT * FROM ConsumerDiet WHERE P_NO = :SearchValue";
                 DBAdapter = new OracleDataAdapter(commandString, connectionString);
                 // 매개변수 추가
@@ -181,7 +181,7 @@ namespace PT_Project
 
         private void ModifyConsumerDiet(DateTime selectedDate, string modifiedPMenu1, string modifiedPMenu2, string modifiedPMenu3)
         {
-            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=DESKTOP-M7OKFI9)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
+            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
             {
                 Odpconn.Open();
 
