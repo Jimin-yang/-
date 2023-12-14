@@ -38,7 +38,7 @@ namespace PT_Project
             userid = loginform.getusernumber;
             dataGridView1.Columns.Clear();
             SetupDataGridViewColumns();
-            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=DESKTOP-localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
+            using (OracleConnection Odpconn = new OracleConnection("User Id=ptadmin;Password=1111;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))"))
             {
                 Odpconn.Open();
                 string strqry = "select * from Consumerdiet where P_NO=:programId";
