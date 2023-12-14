@@ -91,7 +91,17 @@ namespace PT_Project
         }
 
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            dateTimePicker1.Enabled = checkBox1.Checked;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            // CheckBox2에 대한 처리가 필요하다면 여기에 추가
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
             {
@@ -136,16 +146,6 @@ namespace PT_Project
                 lunchTextBox.Text = string.Empty;
                 dinnerTextBox.Text = string.Empty;
             }
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            dateTimePicker1.Enabled = checkBox1.Checked;
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            // CheckBox2에 대한 처리가 필요하다면 여기에 추가
         }
     }
 }
